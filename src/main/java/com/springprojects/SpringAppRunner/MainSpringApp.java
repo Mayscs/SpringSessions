@@ -1,6 +1,8 @@
-package com.springprojects.InversionOfControl;
+package com.springprojects.SpringAppRunner;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import com.springprojects.InversionOfControl.Coach;
 
 public class MainSpringApp {
 	// Using Spring metadata or configuration file i.e. xml file
@@ -14,6 +16,13 @@ public class MainSpringApp {
 
 		coach = context.getBean("trckCoach", Coach.class);
 		System.out.println(coach.getDailyWorkout());
+
+		coach = (Coach) context.getBean("cricketCoach");
+		System.out.println(coach.getDailyWorkout());
+
+		//Dependency Injection: Constructor Injection
+		coach = context.getBean("footballCoach", Coach.class);
+		System.out.println("\n" + coach.getDailyWorkout() + "\n" + coach.getTrainingService());
 		//4. Close the context
 		context.close();
 	}

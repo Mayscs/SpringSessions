@@ -5,4 +5,9 @@ public class TrackCoach implements Coach {
 	public String getDailyWorkout(){
 		return "Spend 1hr running.";
 	}
+
+	@Override
+	public String getTrainingService() {
+		return null;
+	}
 }

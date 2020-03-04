@@ -5,4 +5,9 @@ public class BaseBallCoach implements Coach {
 	public String getDailyWorkout(){
 		return "Spend 1hr batting.";
 	}
+
+	@Override
+	public String getTrainingService() {
+		return null;
+	}
 }

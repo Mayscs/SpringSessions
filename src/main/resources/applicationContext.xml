@@ -15,6 +15,20 @@
     <bean id="trckCoach"
           class="com.springprojects.InversionOfControl.TrackCoach">
     </bean>
+
+    <bean id="cricketCoach"
+          class="com.springprojects.InversionOfControl.CricketCoach">
+    </bean>
+
+    <bean id="footballCoach"
+          class="com.springprojects.DependencyInjection.FootBallCoach"
+          >
+        <constructor-arg ref="trainingService" ></constructor-arg>
+    </bean>
+
+    <bean id="trainingService"
+          class="com.springprojects.DependencyInjection.SeniorMentorTraining">
+    </bean>
 </beans>
 
 
