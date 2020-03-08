@@ -29,6 +29,8 @@
 		<bean id="badmintonCoach"
 					class="com.springprojects.DependencyInjection.BadmintonCoach">
 			<property name="trainingService" ref="trainingService" />
+			<property name="coachName" value="Pulela Gopichand" />
+			<property name="emailId" value="theofficialId@badminton.com"></property>
 		</bean>
 
     <bean id="trainingService"

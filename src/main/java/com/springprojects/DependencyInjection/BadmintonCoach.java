@@ -5,6 +5,25 @@ import com.springprojects.InversionOfControl.Coach;
 //Example of Dependency Injection with Setter Injection
 public class BadmintonCoach implements Coach {
 	private Training trainingService;
+	private String coachName;
+	private String emailId;
+
+	public void setCoachName(String coachName) {
+		this.coachName = coachName;
+	}
+
+	public void setEmailId(String emailId) {
+		this.emailId = emailId;
+	}
+
+	public String getCoachName() {
+		return coachName;
+	}
+
+	public String getEmailId() {
+		return emailId;
+	}
+
 	public BadmintonCoach() {
 		System.out.println("No-args Constructor");
 	}

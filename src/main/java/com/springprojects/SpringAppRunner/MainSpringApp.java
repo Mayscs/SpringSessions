@@ -2,6 +2,7 @@ package com.springprojects.SpringAppRunner;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+import com.springprojects.DependencyInjection.BadmintonCoach;
 import com.springprojects.InversionOfControl.Coach;
 
 public class MainSpringApp {
@@ -27,7 +28,9 @@ public class MainSpringApp {
 		//Dependency Injection: Setter Injection
 		coach = context.getBean("badmintonCoach", Coach.class);
 		System.out.println("\n" + coach.getDailyWorkout() + "\n" + coach.getTrainingService());
-
+		//Literal Values in XML file
+		BadmintonCoach badmintonCoach = context.getBean("badmintonCoach", BadmintonCoach.class);
+		System.out.println("\nThe Best Coach: " + badmintonCoach.getCoachName() + "\nThe official Id of academy is: " + badmintonCoach.getEmailId());
 		//4. Close the context
 		context.close();
 	}
