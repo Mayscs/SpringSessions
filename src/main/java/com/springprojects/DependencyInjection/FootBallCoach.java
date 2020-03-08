@@ -4,7 +4,7 @@ import com.springprojects.InversionOfControl.Coach;
 
 public class FootBallCoach implements Coach {
 	private Training training;
-
+//Dependency Injection :  Constructor Injection
 	public FootBallCoach(Training training) {
 		this.training = training;
 	}

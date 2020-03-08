@@ -18,11 +18,16 @@ public class MainSpringApp {
 		System.out.println(coach.getDailyWorkout());
 
 		coach = (Coach) context.getBean("cricketCoach");
-		System.out.println(coach.getDailyWorkout());
+		System.out.println("\n" + coach.getDailyWorkout());
 
 		//Dependency Injection: Constructor Injection
 		coach = context.getBean("footballCoach", Coach.class);
 		System.out.println("\n" + coach.getDailyWorkout() + "\n" + coach.getTrainingService());
+
+		//Dependency Injection: Setter Injection
+		coach = context.getBean("badmintonCoach", Coach.class);
+		System.out.println("\n" + coach.getDailyWorkout() + "\n" + coach.getTrainingService());
+
 		//4. Close the context
 		context.close();
 	}

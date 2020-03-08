@@ -26,6 +26,11 @@
         <constructor-arg ref="trainingService" ></constructor-arg>
     </bean>
 
+		<bean id="badmintonCoach"
+					class="com.springprojects.DependencyInjection.BadmintonCoach">
+			<property name="trainingService" ref="trainingService" />
+		</bean>
+
     <bean id="trainingService"
           class="com.springprojects.DependencyInjection.SeniorMentorTraining">
     </bean>
