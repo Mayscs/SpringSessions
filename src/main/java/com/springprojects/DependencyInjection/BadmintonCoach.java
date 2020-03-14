@@ -7,6 +7,7 @@ public class BadmintonCoach implements Coach {
 	private Training trainingService;
 	private String coachName;
 	private String emailId;
+	private Training advancedTraining;
 
 	public void setCoachName(String coachName) {
 		this.coachName = coachName;
@@ -33,6 +34,11 @@ public class BadmintonCoach implements Coach {
 		this.trainingService = trainingService;
 	}
 
+	//Practice Activity2 Setter Method
+	public void setAdvancedTraining(Training advancedTraining) {
+		this.advancedTraining = advancedTraining;
+	}
+
 	@Override
 	public String getDailyWorkout() {
 		return "Spend 1 hour daily in leg exercise for swift forward and backward movement.";
@@ -40,6 +46,7 @@ public class BadmintonCoach implements Coach {
 
 	@Override
 	public String getTrainingService() {
+		trainingService.getTrainingService();
 		return "Expert training from International players like Saina Nehwal, PV Sindhu, Lin Dan, Lee Chong Woi.";
 	}
 }

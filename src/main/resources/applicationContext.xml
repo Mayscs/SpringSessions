@@ -31,11 +31,16 @@
 			<property name="trainingService" ref="trainingService" />
 			<property name="coachName" value="${badminton.coach}" />
 			<property name="emailId" value="theofficialId@badminton.com"></property>
+			<property name="advancedTraining" ref="advancedTrainingService"/>
 		</bean>
 
     <bean id="trainingService"
           class="com.springprojects.DependencyInjection.SeniorMentorTraining">
     </bean>
+
+	<bean id="advancedTrainingService"
+				class="com.springprojects.DependencyInjection.AdvancedTraining">
+	</bean>
 
 		<context:property-placeholder location="classpath:allSports.properties"/>
 </beans>
