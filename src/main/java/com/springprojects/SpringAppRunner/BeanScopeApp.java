@@ -3,9 +3,11 @@ package com.springprojects.SpringAppRunner;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import com.springprojects.InversionOfControl.Coach;
+import com.springprojects.utilities.ConsoleColors;
 
 public class BeanScopeApp {
 	public static void main(String[] args) {
+		System.out.println(ConsoleColors.RESET);
 		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
 		Coach primaryCoachCity = context.getBean("bblCoach", Coach.class);
 		Coach assistantCoachCity = context.getBean("bblCoach", Coach.class);
@@ -13,6 +15,10 @@ public class BeanScopeApp {
 		Coach primaryCoachState = context.getBean("bblCoach2", Coach.class);
 		Coach assistantCoachState = context.getBean("bblCoach2", Coach.class);
 		checkCoach(primaryCoachState, assistantCoachState);
+		// =========== Our Own Custom Methods(Hook) =========
+		Coach tennisCoach = context.getBean("tennisCoach",Coach.class);
+		System.out.println(ConsoleColors.RESET);
+		context.close();
 	}
 
 	private static void checkCoach(Coach primaryCoach, Coach assistantCoach) {

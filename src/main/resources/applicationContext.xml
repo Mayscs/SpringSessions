@@ -50,6 +50,13 @@
 				scope="prototype">
 	</bean>
 
+	<bean id="tennisCoach"
+				class="com.springprojects.BeanScope.TennisCoach"
+				scope="singleton"
+				init-method="doInitializeTask"
+				destroy-method="doClosingTask" >
+	</bean>
+
 </beans>
 
 
