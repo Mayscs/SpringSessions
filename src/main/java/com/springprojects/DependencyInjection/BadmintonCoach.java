@@ -46,7 +46,11 @@ public class BadmintonCoach implements Coach {
 
 	@Override
 	public String getTrainingService() {
-		trainingService.getTrainingService();
-		return "Expert training from International players like Saina Nehwal, PV Sindhu, Lin Dan, Lee Chong Woi.";
+		return trainingService.getTrainingService();
+		//return "Expert training from International players like Saina Nehwal, PV Sindhu, Lin Dan, Lee Chong Woi.";
+	}
+
+	public String getAdvancedTraining() {
+		return advancedTraining.getTrainingService();
 	}
 }

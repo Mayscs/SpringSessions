@@ -43,6 +43,13 @@
 	</bean>
 
 		<context:property-placeholder location="classpath:allSports.properties"/>
+
+	<!-- ############### Bean Scope ############## -->
+	<bean id="bblCoach2"
+				class="com.springprojects.InversionOfControl.BaseBallCoach"
+				scope="prototype">
+	</bean>
+
 </beans>
 
 
