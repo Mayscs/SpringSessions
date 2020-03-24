@@ -10,4 +10,9 @@ public class GolfCoach implements Coach {
 	public String getDailyRoutine() {
 		return "Practice burdy for half an hour.";
 	}
+
+	@Override
+	public String getTrainingService() {
+		return null;
+	}
 }

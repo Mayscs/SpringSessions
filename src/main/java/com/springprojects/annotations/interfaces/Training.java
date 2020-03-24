@@ -1,6 +1,5 @@
 package com.springprojects.annotations.interfaces;
 
-public interface Coach {
-	String getDailyRoutine();
+public interface Training {
 	String getTrainingService();
 }
