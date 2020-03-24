@@ -1,8 +1,8 @@
-package com.springprojects.SpringAppRunner;
+package com.springprojects.XMLConfigurations.SpringAppRunner;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import com.springprojects.InversionOfControl.Coach;
+import com.springprojects.XMLConfigurations.interfaces.Coach;
 import com.springprojects.utilities.ConsoleColors;
 
 public class BeanScopeApp {
@@ -17,7 +17,6 @@ public class BeanScopeApp {
 		checkCoach(primaryCoachState, assistantCoachState);
 		// =========== Our Own Custom Methods(Hook) =========
 		Coach tennisCoach = context.getBean("tennisCoach",Coach.class);
-		System.out.println(ConsoleColors.RESET);
 		context.close();
 	}
 

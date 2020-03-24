@@ -1,4 +1,6 @@
-package com.springprojects.DependencyInjection;
+package com.springprojects.XMLConfigurations.DependencyInjection;
+
+import com.springprojects.XMLConfigurations.interfaces.Training;
 
 public class SeniorMentorTraining implements Training {
 

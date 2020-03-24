@@ -1,6 +1,7 @@
-package com.springprojects.DependencyInjection;
+package com.springprojects.XMLConfigurations.DependencyInjection;
 
-import com.springprojects.InversionOfControl.Coach;
+import com.springprojects.XMLConfigurations.interfaces.Coach;
+import com.springprojects.XMLConfigurations.interfaces.Training;
 
 //Example of Dependency Injection with Setter Injection
 public class BadmintonCoach implements Coach {

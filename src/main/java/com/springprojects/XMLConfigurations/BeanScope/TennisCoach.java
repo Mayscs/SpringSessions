@@ -1,6 +1,6 @@
-package com.springprojects.BeanScope;
+package com.springprojects.XMLConfigurations.BeanScope;
 
-import com.springprojects.InversionOfControl.Coach;
+import com.springprojects.XMLConfigurations.interfaces.Coach;
 import com.springprojects.utilities.ConsoleColors;
 
 public class TennisCoach implements Coach {

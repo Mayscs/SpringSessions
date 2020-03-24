@@ -9,25 +9,25 @@
 
     <!-- Define your beans here -->
     <bean id="bblCoach"
-          class="com.springprojects.InversionOfControl.BaseBallCoach">
+          class="com.springprojects.XMLConfigurations.InversionOfControl.BaseBallCoach">
     </bean>
 
     <bean id="trckCoach"
-          class="com.springprojects.InversionOfControl.TrackCoach">
+          class="com.springprojects.XMLConfigurations.InversionOfControl.TrackCoach">
     </bean>
 
     <bean id="cricketCoach"
-          class="com.springprojects.InversionOfControl.CricketCoach">
+          class="com.springprojects.XMLConfigurations.InversionOfControl.CricketCoach">
     </bean>
 
     <bean id="footballCoach"
-          class="com.springprojects.DependencyInjection.FootBallCoach"
+          class="com.springprojects.XMLConfigurations.DependencyInjection.FootBallCoach"
           >
         <constructor-arg ref="trainingService" ></constructor-arg>
     </bean>
 
 		<bean id="badmintonCoach"
-					class="com.springprojects.DependencyInjection.BadmintonCoach">
+					class="com.springprojects.XMLConfigurations.DependencyInjection.BadmintonCoach">
 			<property name="trainingService" ref="trainingService" />
 			<property name="coachName" value="${badminton.coach}" />
 			<property name="emailId" value="theofficialId@badminton.com"></property>
@@ -35,23 +35,23 @@
 		</bean>
 
     <bean id="trainingService"
-          class="com.springprojects.DependencyInjection.SeniorMentorTraining">
+          class="com.springprojects.XMLConfigurations.DependencyInjection.SeniorMentorTraining">
     </bean>
 
 	<bean id="advancedTrainingService"
-				class="com.springprojects.DependencyInjection.AdvancedTraining">
+				class="com.springprojects.XMLConfigurations.DependencyInjection.AdvancedTraining">
 	</bean>
 
 		<context:property-placeholder location="classpath:allSports.properties"/>
 
 	<!-- ############### Bean Scope ############## -->
 	<bean id="bblCoach2"
-				class="com.springprojects.InversionOfControl.BaseBallCoach"
+				class="com.springprojects.XMLConfigurations.InversionOfControl.BaseBallCoach"
 				scope="prototype">
 	</bean>
 
 	<bean id="tennisCoach"
-				class="com.springprojects.BeanScope.TennisCoach"
+				class="com.springprojects.XMLConfigurations.BeanScope.TennisCoach"
 				scope="singleton"
 				init-method="doInitializeTask"
 				destroy-method="doClosingTask" >

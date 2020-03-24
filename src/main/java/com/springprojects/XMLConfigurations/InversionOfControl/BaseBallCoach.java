@@ -1,4 +1,6 @@
-package com.springprojects.InversionOfControl;
+package com.springprojects.XMLConfigurations.InversionOfControl;
+
+import com.springprojects.XMLConfigurations.interfaces.Coach;
 
 public class BaseBallCoach implements Coach {
 	@Override

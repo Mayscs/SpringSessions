@@ -1,9 +1,10 @@
-package com.springprojects.SpringAppRunner;
+package com.springprojects.XMLConfigurations.SpringAppRunner;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import com.springprojects.DependencyInjection.BadmintonCoach;
-import com.springprojects.InversionOfControl.Coach;
+import com.springprojects.XMLConfigurations.DependencyInjection.BadmintonCoach;
+
+import com.springprojects.XMLConfigurations.interfaces.Coach;
 
 public class IOCAndDIApp {
 	// Using Spring metadata or configuration file i.e. xml file

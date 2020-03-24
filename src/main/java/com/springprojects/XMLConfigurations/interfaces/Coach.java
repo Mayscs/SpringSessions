@@ -1,4 +1,4 @@
-package com.springprojects.InversionOfControl;
+package com.springprojects.XMLConfigurations.interfaces;
 
 public interface Coach {
 	String getDailyWorkout();

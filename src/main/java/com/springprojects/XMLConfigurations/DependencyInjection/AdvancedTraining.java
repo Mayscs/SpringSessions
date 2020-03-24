@@ -1,6 +1,8 @@
-package com.springprojects.DependencyInjection;
+package com.springprojects.XMLConfigurations.DependencyInjection;
 
 import java.util.Random;
+
+import com.springprojects.XMLConfigurations.interfaces.Training;
 
 public class AdvancedTraining implements Training {
 	public AdvancedTraining(){
