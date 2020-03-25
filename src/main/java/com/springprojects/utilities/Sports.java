@@ -21,5 +21,6 @@ public enum Sports {
 	ARCHERY,
 	GYMNASTIC,
 	ROWING,
-	CYCLING
+	CYCLING,
+	FIELDHOCKEY
 }

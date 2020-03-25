@@ -21,7 +21,12 @@ public class AnnotationsDIApp {
 		//Field Injection with Annotations
 		System.out.println(newLine + ((SwimmingCoach) swimmingCoach).getNewTrainingService());
 
-		context.close();
+		//Practice Activity 5: Read from file and random selection
+
+		Coach fieldHockeyCoach = context.getBean("hockeyCoach", Coach.class);
+		System.out.println(newLine + fieldHockeyCoach.getDailyRoutine() + newLine + fieldHockeyCoach.getTrainingService());
+
+			context.close();
 		System.out.println(newLine + "=================== ~END~ ===================");
 	}
 }
