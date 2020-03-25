@@ -5,9 +5,13 @@ import org.springframework.stereotype.Component;
 import com.springprojects.annotations.interfaces.Training;
 
 @Component
-public class SuperTraining implements Training {
+public class advancedTraining implements Training {
 	@Override
 	public String getTrainingService() {
-		return "Get trained with the world experts of %s.";
+		return "Get trained with the ellite level players of  %s";
 	}
 }
+
+
+
+

@@ -1,19 +1,22 @@
 package com.springprojects.annotations.DependencyInjection;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 import com.springprojects.annotations.interfaces.Coach;
 import com.springprojects.annotations.interfaces.Training;
+import com.springprojects.utilities.Sports;
 
 @Component
 public class TableTennisCoach implements Coach {
-private Training additionalTraining;
+private Training trainingService;
 
 //Constructor Injection
 @Autowired
-public TableTennisCoach(Training newTraining) {
-	this.additionalTraining = newTraining;
+public TableTennisCoach(@Qualifier("advancedTraining") Training ttTraining) {
+	System.out.println("Performed by Constructor Injection.");
+	this.trainingService = ttTraining;
 }
 
 	@Override
@@ -23,7 +26,8 @@ public TableTennisCoach(Training newTraining) {
 
 	@Override
 	public String getTrainingService() {
-		return additionalTraining.getTrainingService();
+		//System.out.println("Performed by Constructor Injection.");
+		return String.format(trainingService.getTrainingService(), Sports.TABLETENNIS);
 	}
 
 
