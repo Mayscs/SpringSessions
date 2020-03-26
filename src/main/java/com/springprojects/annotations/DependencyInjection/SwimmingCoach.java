@@ -2,6 +2,7 @@ package com.springprojects.annotations.DependencyInjection;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 import com.springprojects.annotations.interfaces.Coach;
@@ -9,6 +10,7 @@ import com.springprojects.annotations.interfaces.Training;
 import com.springprojects.utilities.Sports;
 
 @Component("mySwimmingCoach")
+@Scope("prototype")
 public class SwimmingCoach implements Coach {
 
 	private Training trainingService;

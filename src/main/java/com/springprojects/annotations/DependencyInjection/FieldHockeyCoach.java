@@ -2,12 +2,14 @@ package com.springprojects.annotations.DependencyInjection;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 import com.springprojects.annotations.interfaces.Coach;
 import com.springprojects.annotations.interfaces.Training;
 
 @Component(value = "hockeyCoach")
+@Scope(value = "singleton")
 public class FieldHockeyCoach implements Coach {
 
 	private Training trainingService;
