@@ -16,8 +16,7 @@ public class AnnoatationsScopeLifetimeApp {
 		Coach divingCoach = context.getBean("mySwimmingCoach", Coach.class);
 		areObjectsReferringSameBean(swimCoach, divingCoach);
 
-		Coach swimmingCoach = context.getBean("mySwimmingCoach", SwimmingCoach.class);
-		System.out.println("\n" + ((SwimmingCoach) swimmingCoach).getNewTrainingService());
+		System.out.println("\n" + ((SwimmingCoach) swimCoach).getNewTrainingService());
 
 		context.close();
 	}

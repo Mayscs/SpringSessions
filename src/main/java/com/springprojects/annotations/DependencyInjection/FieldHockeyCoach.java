@@ -1,5 +1,8 @@
 package com.springprojects.annotations.DependencyInjection;
 
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Scope;
@@ -29,5 +32,15 @@ public class FieldHockeyCoach implements Coach {
 	@Override
 	public String getTrainingService() {
 		return trainingService.getTrainingService();
+	}
+
+	@PostConstruct
+	public void doInitialiation(){
+		System.out.println("Initialization with bean.");
+	}
+
+	@PreDestroy
+	public void doCleanUp(){
+		System.out.println("Destroy used objects.");
 	}
 }

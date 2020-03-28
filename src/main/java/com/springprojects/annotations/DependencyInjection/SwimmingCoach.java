@@ -54,11 +54,13 @@ public class SwimmingCoach implements Coach {
 		return String.format(newTrainingService.getTrainingService(), "Field Swimming".toUpperCase());
 	}
 
+	//Define my init method
 	@PostConstruct
-	public void doInitialiation(){
+	public void doInitialization(){
 		System.out.println("Initialization with bean.");
 	}
 
+	//Define my destroy method
 	@PreDestroy
 	public void doCleanUp(){
 		System.out.println("Destroy used objects.");
